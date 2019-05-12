@@ -1,6 +1,6 @@
 1. Install dependancies: 
 
-* `install-deps.sh`
+    `install-deps.sh`
 
 2. Modify grub configuration:
 
