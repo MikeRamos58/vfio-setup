@@ -2,38 +2,38 @@
 
     `install-deps.sh`
 
-2. Modify grub configuration:
+2. Add yourself to the libvirt group:
+
+    `sudo usermod -a -G libvirt $(whoami)`
+    
+3. Modify grub configuration:
     ````
     GRUB_CMDLINE_LINUX_DEFAULT="amd_iommu=on"
     ````
 
-3. Updage grub:
+4. Updage grub:
 
     `sudo update-grub`
 
-4. Check device ids and modify configurations files if necessary:
+5. Check device ids and modify configurations files if necessary:
 
     `ls-iommu.sh`
 
-5. Place vfio configuration files:
+6. Place vfio configuration files:
 
     `setup.sh`
 
-6. Reboot and check device is bound to the vfio driver:
+7. Reboot and check device is bound to the vfio driver:
 
     `ls-pci.sh`
 
-7. Enable/start libvirtd:
+8. Enable/start libvirtd:
 
     `sudo systemctl enable libvirtd.service`  
 
     `sudo systemctk start libvirtd.service`  
-
-9. Add yourself to the libvirt group:
-
-    `sudo usermod -a -G libvirt $(whoami)`
-    
-10. Edit `/etc/apparmor.d/abstractions/libvirt-qemu`:
+      
+9. Edit `/etc/apparmor.d/abstractions/libvirt-qemu`:
     ````
     # for usb access
     /dev/bus/usb/** rw,
@@ -43,13 +43,13 @@
     /run/udev/data/* rw,
     ````
 
-11. Restart apparmor:
+10. Restart apparmor:
 
     `serive apparmor restart`
 
-12. Install VM.
+11. Install VM.
 
-13. Fix code 43 issue:
+12. Fix code 43 issue:
 
     `virsh edit <VM-name>`
     
