@@ -3,8 +3,9 @@
     `install-deps.sh`
 
 2. Modify grub configuration:
-
-    `GRUB_CMDLINE_LINUX_DEFAULT="amd_iommu=on"`
+    ````
+    GRUB_CMDLINE_LINUX_DEFAULT="amd_iommu=on"
+    ````
 
 3. Updage grub:
 
