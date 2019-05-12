@@ -39,20 +39,24 @@
     /run/udev/data/* rw,`
     ````
 
-9. Restart apparmor: 
-`serive apparmor restart`
+9. Restart apparmor:
+
+    `serive apparmor restart`
 
 10. Install VM.
 
-11. Fix code 43 issue: 
-`virsh edit <VM-name>`
+11. Fix code 43 issue:
 
-`<hyperv>
-   <relaxed state='on'/>
-   <vapic state='on'/>
-   <spinlocks state='on' retries='8191'/>
-   <vendor_id state='on' value='whatever'/>
- </hyperv>
- <kvm>
-   <hidden state='on'/>
- </kvm>` 
+    `virsh edit <VM-name>`
+    
+    ````
+    <hyperv>
+      <relaxed state='on'/>
+      <vapic state='on'/>
+      <spinlocks state='on' retries='8191'/>
+      <vendor_id state='on' value='whatever'/>
+    </hyperv>
+    <kvm>
+      <hidden state='on'/>
+    </kvm>` 
+    ````
