@@ -36,7 +36,7 @@
     /etc/udev/udev.conf r,
     /sys/bus/ r,
     /sys/class/ r,
-    /run/udev/data/* rw,`
+    /run/udev/data/* rw,
     ````
 
 9. Restart apparmor:
