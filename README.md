@@ -29,14 +29,14 @@
     `sudo systemctk start libvirtd.service`  
 
 8. Edit /etc/apparmor.d/abstractions/libvirt-qemu:
-````
+    ````
     # for usb access
     /dev/bus/usb/** rw,
     /etc/udev/udev.conf r,
     /sys/bus/ r,
     /sys/class/ r,
     /run/udev/data/* rw,`
-````
+    ````
 
 9. Restart apparmor: 
 `serive apparmor restart`
