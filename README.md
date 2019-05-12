@@ -29,7 +29,7 @@
 
     `sudo systemctk start libvirtd.service`  
 
-9. Add yourself to the libvirtd group:
+9. Add yourself to the libvirt group:
 
     `sudo usermod -a -G libvirt $(whoami)`
     
