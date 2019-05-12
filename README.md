@@ -8,7 +8,7 @@
 `sudo update-grub`
 
 4. Check device ids and modify configurations files if necessary:
-ls-iommu.sh
+`ls-iommu.sh`
 
 5. Place vfio configuration files:
 `setup.sh`
