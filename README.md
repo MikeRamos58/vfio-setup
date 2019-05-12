@@ -1,5 +1,5 @@
 1. Install dependancies:
-`install-deps.sh`
+...`install-deps.sh`
 
 2. Modify grub configuration:
 `GRUB_CMDLINE_LINUX_DEFAULT="amd_iommu=on"`
