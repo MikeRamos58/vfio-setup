@@ -29,7 +29,10 @@
 
     `sudo systemctk start libvirtd.service`  
 
-8. Edit `/etc/apparmor.d/abstractions/libvirt-qemu`:
+9. Add yourself to the libvirtd group:
+    `sudo usermod -a -G libvirt $(whoami)`
+    
+10. Edit `/etc/apparmor.d/abstractions/libvirt-qemu`:
     ````
     # for usb access
     /dev/bus/usb/** rw,
@@ -39,13 +42,13 @@
     /run/udev/data/* rw,
     ````
 
-9. Restart apparmor:
+11. Restart apparmor:
 
     `serive apparmor restart`
 
-10. Install VM.
+12. Install VM.
 
-11. Fix code 43 issue:
+13. Fix code 43 issue:
 
     `virsh edit <VM-name>`
     
