@@ -29,7 +29,7 @@
 
     `sudo systemctk start libvirtd.service`  
 
-8. Edit /etc/apparmor.d/abstractions/libvirt-qemu:
+8. Edit `/etc/apparmor.d/abstractions/libvirt-qemu`:
     ````
     # for usb access
     /dev/bus/usb/** rw,
