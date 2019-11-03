@@ -45,7 +45,7 @@
 
 10. Restart apparmor:
 
-    `serive apparmor restart`
+    `service apparmor restart`
 
 11. Install VM.
 
