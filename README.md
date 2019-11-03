@@ -8,7 +8,7 @@
     
 3. Modify grub configuration:
     ````
-    GRUB_CMDLINE_LINUX_DEFAULT="iommu=1 amd_iommu=on"
+    GRUB_CMDLINE_LINUX_DEFAULT="iommu=1 amd_iommu=on pcie_acs_override=downstream"
     ````
 
 4. Updage grub:
