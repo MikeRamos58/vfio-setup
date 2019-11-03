@@ -31,7 +31,7 @@
 
     `sudo systemctl enable libvirtd.service`  
 
-    `sudo systemctk start libvirtd.service`  
+    `sudo systemctl start libvirtd.service`  
       
 9. Edit `/etc/apparmor.d/abstractions/libvirt-qemu`:
     ````
