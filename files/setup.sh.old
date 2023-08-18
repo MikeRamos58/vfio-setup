@@ -1,0 +1,5 @@
+#!/bin/sh
+sudo cp /home/michael/scripts/vfio/vfio.conf /etc/modprobe.d/vfio.conf
+sudo cp /home/michael/scripts/vfio/mkinitcpio.conf /etc/mkinitcpio.conf
+sudo mkinitcpio -g /boot/initramfs-4.19-x86_64.img
+echo "Ready to reboot!"

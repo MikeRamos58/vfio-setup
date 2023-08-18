@@ -1,19 +1,31 @@
 1. Install dependancies: 
 
-    `install-deps.sh`
+    For Debian-based systems:
+    ```bash
+    ./install-deps-deb.sh
+    ```
+
+    For Arch-based systems:
+    ```bash
+    ./install-deps-arch.sh
+    ```
 
 2. Add yourself to the libvirt group:
 
     `sudo usermod -a -G libvirt $(whoami)`
     
-3. Modify grub configuration:
-    ````
-    GRUB_CMDLINE_LINUX_DEFAULT="iommu=1 amd_iommu=on pcie_acs_override=downstream"
-    ````
+3. Add the following options to `GRUB_CMDLINE_LINUX_DEFAULT`:
 
-4. Updage grub:
+    /etc/default/grub
+    ```
+    GRUB_CMDLINE_LINUX_DEFAULT="... iommu=1 amd_iommu=on pcie_acs_override=downstream ..."
+    ```
 
-    `sudo update-grub`
+4. Update grub:
+
+    ```bash
+    sudo grub-mkconfig -o /boot/grub/grub.cfg
+    ```
 
 5. Check device ids and modify configurations files if necessary:
 
